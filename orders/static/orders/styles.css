@@ -1,16 +1,16 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+/* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> */
 
 body {
     font-family: "Comic Sans MS";
-    background-color: #f2f0ed;
-
+    font-weight: bold;
+    color:#ffffff;
 }
 
 @font-face {
     font-family: 'NexaRustSlab-BlackShadow01-Free';
     src: url('NexaRustSlab-BlackShadow01-Free-webfont.woff2') format('woff2'),
          url('NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -26,45 +26,29 @@ body {
     font-family: 'NexaRustExtras-Free';
     src: url('NexaRustExtras-Free-webfont.woff2') format('woff2'),
          url('NexaRustExtras-Free-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
-
 }
 
 .row{
   padding: 5px 0px 5px 20px
 }
 .all{
-  font-family: "Verdana";
-  background-color: #fcfbf9;
-}
-
-#title{
-  text-align: center;
-  margin:0px 20px 30px 20px;
-  padding: 30px 0px 0px 0px;
-  font-size: 100px;
-  color: #a7d2c8;
-  font-family: 'NexaRustSlab-BlackShadow01-Free';
-  background-color: #fcfbf9;
-}
-
-#PIZZA{
-  color: #f2d388;
-  font-size: 75px;
-}
-
-#HOUSE{
-  color: #c98474;
-  font-size: 75px;
+  background-color: #140e08;
 }
 
 h2{
   color: #f2c968;
 }
+
 .card-title {
-  color:#d15540;
+  color: #ff583d;
+  font-weight: bold;
+  text-shadow: 1px 2px 6px #ffffff;
 }
+
+
+
 #ICONS{
   font-family: 'NexaRustExtras-Free';
   font-size: 50PX;
@@ -241,4 +225,131 @@ button#orderBtn {
   font-weight: bold;
   font-size: 20px;
   text-align: center;
+}
+
+#logo {
+    /* align-items: center; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:180px;
+}
+
+/* Centered text */
+.mainTitle {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 75px;
+  text-align: center;
+}
+
+/* navigation bar */
+.navigation {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+a{
+  color: #ffca00;
+}
+
+/* background images for menu items */
+/* Pizza */
+#Regular {
+  background-image: url('../imgs/regular.jpg');
+  background-repeat: no-repeat;
+
+}
+
+#Sicilian {
+  background-image: url('../imgs/sicilian.jpg');
+}
+
+#Steak\ and\ Cheese {
+  background-image: url('../imgs/SteakCheese.jpg');
+}
+
+/* Beverages */
+#\32 \ Liter\ Soda {
+  background-image: url('../imgs/bigSoda.jpg');
+}
+
+#Soda\ Can{
+  background-image: url('../imgs/sodaCan.jpg');
+}
+
+#\31 7oz\.\ Bottled\ Water {
+  background-image: url('../imgs/water.jpg');
+}
+
+/* Salads */
+#Garden\ Salad {
+  background-image: url('../imgs/gardenSalad.jpg');
+}
+
+#Greek\ Salad {
+  background-image: url('../imgs/greekSalad.jpg');
+}
+
+/* Subs */
+#Cheese\ Sub {
+  background-image: url('../imgs/cheeseSub.jpg');
+}
+
+#Italian\ Sub {
+  background-image: url('../imgs/italianSub.jpg');
+}
+
+#Ham\ and\ Cheese\ Sub {
+  background-image: url('../imgs/hamSub.jpg');
+}
+
+#Tuna\ Sub {
+  background-image: url('../imgs/tunaSub.jpg');
+}
+
+#Turkey\ Sub {
+  background-image: url('../imgs/turkeySub.jpg');
+}
+
+#Veggie\ Sub {
+  background-image: url('../imgs/veggieSub.jpg');
+}
+
+#Fried\ Chicken\ Sub {
+  background-image: url('../imgs/chickenSub.jpg');
+}
+
+#Hamburger {
+  background-image: url('../imgs/hamburger.jpg');
+
+}
+
+/* Pastas */
+
+#Baked\ Ziti {
+  background-image: url('../imgs/ziti.jpg');
+}
+
+
+#Tomato\ Pasta {
+  background-image: url('../imgs/tomato.jpg');
+}
+
+.card {
+  /* background-image: url('../imgs/regular.jpg'); */
+  height: 100px;
+  margin-bottom: 20px;
+  opacity: 1;
 }

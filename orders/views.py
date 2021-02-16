@@ -9,7 +9,7 @@ from .models import *
 
 
 # Create your views here.
-def index(request):
+def makeOrder(request):
     context = {
         "Basics": Basics.objects.all(),
         "Beverages": Beverages.objects.all(),
@@ -21,7 +21,7 @@ def index(request):
         "bigs": Basics.objects.filter(Size="big"),
         "Addings":Salad_adding.objects.all()
     }
-    return render(request, "orders/index.html", context)
+    return render(request, "orders/makeOrder.html", context)
 
 def homePage(request):
     return render(request, "orders/homePage.html")

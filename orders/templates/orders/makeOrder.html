@@ -3,15 +3,39 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
   <link rel="stylesheet" href="static/orders/styles.css"/>
   <script src="static/orders/javascript.js"> </script>
 
 </head>
 
 <body>
+  <div class="">
+    <div class="navigation">
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link" href="#">MENU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'makeOrder' %}">ORDER</a>
+        </li>
+        <li class="nav-item" >
+          <a href="{% url 'homePage' %}"><img src="{% static "/imgs/flozaLogo.png" %}" class="nav-link" id="logo" alt="FLOZA"  width="150px"> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+    <img src="{% static "/imgs/makeOrder.jpg" %}"  class="img-fluid" alt="...">
+
   <div class="all">
-    <h1 id="title">Flora <span id="PIZZA">Pizza</span> <span id="HOUSE">House</span></h1>
+
     <ul class="nav justify-content-end">
         <li class="nav-item">
           <a id = "login" class="nav-link active">Login</a>
@@ -36,8 +60,8 @@
       <h2>Pizza<span id="ICONS"> H</span> </h2>
         <div class="row">
         {% for small in smalls %}
-          <div class="col-sm-3">
-            <div class="card">
+          <div class="col-sm-4" >
+            <div class="card" id="{{small.Basic}}">
               <div class="card-body" id="basic_price" data-price="{{ small.Price }}" data-basic="{{ small.Basic }}">
                 <h5 class="card-title" >{{ small.Basic }} </h5>
                 <p class="card-text" >${{ small.Price }}+</p>
@@ -45,27 +69,27 @@
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
 
         <h2>Beverages<span id="ICONS"> W</span> </h2>
         <div class="row">
         {% for Beverage in Beverages %}
-        <div class="col-sm-3">
-          <div class="card" id="direct" data-thing="{{Beverage.Beverage}}" data-price="{{Beverage.Price}}">
-            <div class="card-body">
+        <div class="col-sm-4">
+          <div class="card" id="{{Beverage.Beverage}}">
+            <div class="card-body" id="direct" data-thing="{{Beverage.Beverage}}" data-price="{{Beverage.Price}}">
               <h5 class="card-title">{{ Beverage.Beverage }}</h5>
               <p class="card-text">$ {{ Beverage.Price }}</p>
             </div>
           </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
 
         <h2>Salads<span id="ICONS"> N</span></h2>
         <div class="row">
         {% for Salad in Salads %}
-        <div class="col-sm-3">
-          <div class="card">
+        <div class="col-sm-4">
+          <div class="card" id="{{ Salad.Salad }}">
             <div class="card-body" id="salad_price" data-price="{{ Salad.Price }}" data-salad="{{ Salad.Salad }}">
               <h5 class="card-title">{{ Salad.Salad }}</h5>
               <p class="card-text">$ {{ Salad.Price }}</p>
@@ -79,8 +103,8 @@
         <div class="row">
           {% for Sub in Subs %}
           <div class="col-sm-3">
-          <div class="card" id="direct" data-thing="{{Sub.Sub}}" data-price="{{ Sub.Price }}">
-            <div class="card-body">
+          <div class="card" id="{{Sub.Sub}}">
+            <div class="card-body" id="direct" data-thing="{{Sub.Sub}}" data-price="{{ Sub.Price }}">
               <h5 class="card-title">{{ Sub.Sub }}</h5>
               <p class="card-text">$ {{ Sub.Price }}</p>
             </div>
@@ -92,9 +116,9 @@
         <h2>Pastas<span id="ICONS"> L</span></h2>
         <div class="row">
           {% for Pasta in Pastas %}
-          <div class="col-sm-3">
-            <div class="card" id="direct" data-thing="{{Pasta.Pasta }}" data-price="{{ Pasta.Price }}">
-              <div class="card-body">
+          <div class="col-sm-4">
+            <div class="card" id="{{Pasta.Pasta}}">
+              <div class="card-body" id="direct" data-thing="{{Pasta.Pasta }}" data-price="{{ Pasta.Price }}">
                 <h5 class="card-title">{{ Pasta.Pasta }}</h5>
                 <p class="card-text">$ {{ Pasta.Price }}</p>
               </div>
@@ -115,8 +139,12 @@
           <button  name="button" id="confirm_button">Check out</button>
       </div>
     </div>
+
   </div>
+
   </div>
+
+
   <div id="basic_modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
