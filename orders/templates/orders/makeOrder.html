@@ -128,15 +128,15 @@
         </div>
       </div>
 
-      <div class="col-sm-3">
+      <div class="col-sm-3" id="side_info">
         <div class="login_info">
           <li>Currently logged in as: {{ user.username }}</li>
         </div>
 
-        <h2>My order</h2>
+        <h2 style="text-align:center;padding-top:10px;">My order</h2>
           <div id="order_place"></div>
           <p id="total_amount">Total price: 0</p>
-          <button  name="button" id="confirm_button">Check out</button>
+          <button name="button" type="button" id="confirm_button">Check out</button>
       </div>
     </div>
 
@@ -148,13 +148,13 @@
   <div id="basic_modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h3>Item Options</h3>
+      <h2 style="color:#d22609;">Item Options</h2>
       <form method="post">
         <h4>Choose a size</h4>
         <p>Required - Choose one.</p>
         <input type="radio" name="size" value="big"> Big(15 Slice) <span id="big"></span><br>
         <input type="radio" name="size" value="small"> Small (9 Slice) <span id="small"></span><br>
-        <h4>Would you like whole toppings?</h4>
+        <h4>Would you like extra toppings?</h4>
         <p>Optional - Choose any.</p>
           {% for Topping in Toppings %}
         <input type="checkbox" class="add_thing" name="toppings" value="{{ Topping.Topping }} ${{ Topping.Price }}"> {{ Topping.Topping }} ${{ Topping.Price }}<br>
@@ -163,7 +163,7 @@
         <input type="text" class="note" placeholder="No pickles? Dressing on the side? Let the restaurant know here">
         <br>
         <input type="number" id="pizza" min="1" value="1">
-        <button type="button" name="button" class="order_btn">Order</button>
+        <button type="button" name="button" class="order_btn" style="margin:5px;">Order</button>
       </form>
     </div>
   </div>

@@ -2,7 +2,7 @@
 <head>
  <script>
  setTimeout(function() {
-   window.location.href = "{% url 'index' %}";
+   window.location.href = "{% url 'makeOrder' %}";
  }, 5000);
  </script>
 </head>
@@ -11,7 +11,7 @@
   <div class="">
     <h2>Register successfully, now you can login and order. </h2>
     <p>This page will return to Menu in 10 seconds.</p>
-    <a href="{% url 'index' %}">Go to menu now</a>
+    <a href="{% url 'makeOrder' %}">Go to menu now</a>
   </div>
 
 </body>
