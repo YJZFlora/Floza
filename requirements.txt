@@ -35,9 +35,6 @@ jupyter-client==5.3.3
 jupyter-core==4.5.0
 jupyterlab==1.1.4
 jupyterlab-server==1.0.6
-Keras==2.3.1
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
 librosa==0.7.1
 llvmlite==0.30.0
@@ -49,10 +46,8 @@ nbconvert==5.6.0
 nbformat==4.4.0
 notebook==6.0.1
 numba==0.46.0
-numpy==1.17.2
 oauthlib==3.1.0
 opt-einsum==3.1.0
-pandas==0.25.3
 pandocfilters==1.4.2
 parso==0.5.1
 pexpect==4.7.0
@@ -69,7 +64,6 @@ pycparser==2.19
 Pygments==2.4.2
 pyparsing==2.4.4
 pyrsistent==0.15.4
-pyspark==2.4.4
 python-dateutil==2.8.0
 pytz==2019.3
 PyYAML==5.3
@@ -86,8 +80,6 @@ six==1.12.0
 SoundFile==0.10.2
 sqlparse==0.3.0
 tensorboard==2.1.0
-tensorflow==2.1.0
-tensorflow-estimator==2.1.0
 termcolor==1.1.0
 terminado==0.8.2
 testpath==0.4.2
