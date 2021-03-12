@@ -48,8 +48,8 @@ h2{
 
 }
 
-.card-title {
-  color: #ff583d;
+.card-title, .card-text {
+  color: #d23116;
   font-weight: bold;
   text-shadow: 1px 2px 6px #ffffff;
 }
@@ -328,4 +328,5 @@ a{
   height: 100px;
   margin-bottom: 20px;
   opacity: 1;
+  border: none;
 }

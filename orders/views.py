@@ -26,6 +26,8 @@ def makeOrder(request):
 def homePage(request):
     return render(request, "orders/homePage.html")
 
+def menu(request):
+    return render(request, "orders/menu.html")
 
 def user(request):
     if not request.user.is_authenticated:
