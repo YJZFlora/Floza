@@ -1,4 +1,4 @@
-# Pizza-order-and-delivery-website
+# Floza -- (Pizza order and delivery web application)
 
 Click to try(https://floza.herokuapp.com/)
 
