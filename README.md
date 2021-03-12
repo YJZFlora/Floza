@@ -1,5 +1,7 @@
 # Pizza-order-and-delivery-website
 
+Click to try(https://floza.herokuapp.com/)
+
 ## Functions achieve
 
 * A web application for handling a pizza restaurant’s online orders.
