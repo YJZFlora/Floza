@@ -21,6 +21,12 @@ a{
   color: #ffca00;
 }
 
+#foot {
+  color: grey;
+  font-family: monospace;
+  text-align: center;
+}
+
 /* Centered text */
 .mainTitle {
   position: absolute;
@@ -29,7 +35,7 @@ a{
   transform: translate(-50%, -50%);
   font-weight: bold;
   color: #ffffff;
-  font-size: 75px;
+  font-size: 65px;
   text-align: center;
 }
 
@@ -56,6 +62,82 @@ button:hover {
   opacity: 0.8;
 }
 
-.container {
+.Contact {
+    margin-bottom:20px;
+}
 
+#map {
+  width: 800px;
+  height: 300px;
+}
+
+.contactInfo{
+  color: white;
+  text-align: center;
+  padding: 43px;
+  font-family: emoji;
+  font-size: large;
+  border-radius: 10px;
+}
+
+@media (max-width: 1343px) {
+    .navigation {
+          font-size: 15px;
+    }
+    .mainTitle {
+      font-size: 45px;
+      top: 20%;
+    }
+
+    #logo {
+      width:120px;
+    }
+    .contactInfo{
+      padding: 15px;
+      font-size: 12px;
+    }
+
+    #map {
+      width: 500px;
+      height: 250px;
+    }
+
+    .orderBtn {
+      top:30%;
+    }
+}
+
+@media (max-width: 818px) {
+    .mainTitle {
+      font-size: 35px;
+    }
+
+    #logo {
+      width:120px;
+    }
+    .contactInfo{
+      padding-top: 15px;
+      font-size: 12px;
+    }
+
+    #map {
+      width: 300px;
+    }
+    .orderBtn {
+      display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainTitle {
+      display: none;
+    }
+
+    #logo {
+      width:80px;
+    }
+
+    #map {
+      width: 100px;
+    }
 }

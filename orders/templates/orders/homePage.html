@@ -12,6 +12,10 @@
      <!-- My CSS -->
      <link rel="stylesheet" href="../../static/orders/homePage.css"/>
 
+     <!-- map  -->
+     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
 
      <title>Floza</title>
 
@@ -42,8 +46,9 @@
       </ul>
     </div>
 
-
-    <img src="{% static "/imgs/pizza1.jpg" %}"  class="img-fluid" alt="...">
+    <div class="Contact">
+      <img src="{% static "/imgs/pizza1.jpg" %}"  class="img-fluid" alt="...">
+    </div>
 
     <div class="mainTitle">Flora Pizza~<br/>FloZa</div>
     <div class="orderBtn">
@@ -51,23 +56,45 @@
       <button type="button" class="btn btn-outline-warning" > Order Now!</button>
     </div>
 
-
-    <!-- <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm">
-          Introduction
-        </br> The pizza is good
-      </br> The website designer Flora Zhang is also good!
+        <div class="col">
+          <div id='map'>
+            <script>
+              mapboxgl.accessToken = 'pk.eyJ1IjoiZmxvcmF5anoiLCJhIjoiY2ttbDRibnhjMTducTJ2bzRta3dxNW4yNCJ9.Tdik3mVa84FE1gY--IGMzw';
+              var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [-96.33,30.61],
+                zoom: 15
+              });
+
+              var marker = new mapboxgl.Marker({
+                color: "#e7593b",
+                draggable: false
+                }).setLngLat([-96.33, 30.61])
+                .addTo(map);
+            </script>
+      </div>
         </div>
-        <div class="col-sm">
-          Pizza Picture
-        </div>
-        <div class="col-sm">
-          Google Map API
+        <div class="col">
+          <div class="contactInfo">
+            <p>VISIT US</p>
+            <p>WEEKDAYS: 10:00 AM TO 8:00 PM</p>
+            <p>WEEKENDS: 12:00 AM TO 6:00 PM</p>
+            <p>1993 NOTEXIST LANE, COLLEGE STATION, TX</p>
+            <p> 404.404.4004</p>
+            <a href="{% static "/files/FLOZA.vcf" %}"  class="btn btn-outline-secondary">Download</a>
+          </div>
         </div>
       </div>
     </div>
 
-  </div> -->
+    <div id="foot">
+          <p>©This website is designed and developed by Yijun Zhang (Flora). All rights reserved.</p>
+        </div>
+
+
+
 
 </body>
